@@ -1,1 +1,1589 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>MK Auto Prime | Lavagem Automotiva a Domicílio</title>
+
+<meta name="description" content="MK Auto Prime - Lavagem automotiva a domicílio. Seu carro limpo sem você precisar sair de casa.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#070707;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+select,
+textarea{
+    font-family:inherit;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:18px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:rgba(7,7,7,.82);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+.logo{
+    font-size:23px;
+    font-weight:900;
+    letter-spacing:-1px;
+}
+
+.logo span{
+    color:#f5c400;
+}
+
+nav{
+    display:flex;
+    gap:28px;
+    font-size:14px;
+    font-weight:600;
+    color:#bbb;
+}
+
+nav a{
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#f5c400;
+}
+
+.header-btn{
+    background:#f5c400;
+    color:#050505;
+    padding:11px 18px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:800;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    padding:150px 7% 80px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at 80% 30%,rgba(245,196,0,.13),transparent 30%),
+    radial-gradient(circle at 15% 70%,rgba(255,255,255,.04),transparent 25%),
+    #070707;
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    right:-200px;
+    bottom:-250px;
+    background:#f5c400;
+    opacity:.08;
+    filter:blur(100px);
+    border-radius:50%;
+}
+
+.hero-content{
+    max-width:800px;
+    position:relative;
+    z-index:2;
+}
+
+.tag{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    border:1px solid rgba(245,196,0,.35);
+    background:rgba(245,196,0,.07);
+    color:#f5c400;
+    padding:9px 14px;
+    border-radius:100px;
+    font-size:12px;
+    font-weight:800;
+    margin-bottom:25px;
+}
+
+.tag i{
+    width:7px;
+    height:7px;
+    background:#f5c400;
+    border-radius:50%;
+    box-shadow:0 0 12px #f5c400;
+}
+
+.hero h1{
+    font-size:clamp(48px,7vw,88px);
+    line-height:.95;
+    letter-spacing:-4px;
+    max-width:850px;
+    margin-bottom:27px;
+}
+
+.hero h1 span{
+    color:#f5c400;
+}
+
+.hero p{
+    color:#aaa;
+    max-width:600px;
+    line-height:1.7;
+    font-size:17px;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn-primary{
+    background:#f5c400;
+    color:#050505;
+    padding:16px 24px;
+    border-radius:9px;
+    font-size:14px;
+    font-weight:900;
+    border:none;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(245,196,0,.18);
+}
+
+.btn-secondary{
+    border:1px solid #333;
+    padding:16px 24px;
+    border-radius:9px;
+    font-size:14px;
+    font-weight:700;
+    color:#ddd;
+    transition:.3s;
+}
+
+.btn-secondary:hover{
+    border-color:#f5c400;
+    color:#f5c400;
+}
+
+.hero-info{
+    margin-top:45px;
+    display:flex;
+    gap:35px;
+    flex-wrap:wrap;
+}
+
+.hero-info div{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#aaa;
+    font-size:12px;
+}
+
+.hero-info strong{
+    color:#fff;
+}
+
+/* SECTION */
+
+section{
+    padding:100px 7%;
+}
+
+.section-head{
+    max-width:700px;
+    margin-bottom:50px;
+}
+
+.eyebrow{
+    color:#f5c400;
+    font-size:12px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:13px;
+}
+
+.section-head h2{
+    font-size:clamp(32px,5vw,55px);
+    line-height:1;
+    letter-spacing:-2px;
+    margin-bottom:17px;
+}
+
+.section-head p{
+    color:#929292;
+    line-height:1.7;
+}
+
+/* BENEFITS */
+
+.benefits{
+    background:#0b0b0b;
+}
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.benefit{
+    padding:30px;
+    border:1px solid #1d1d1d;
+    background:#101010;
+    border-radius:14px;
+    transition:.3s;
+}
+
+.benefit:hover{
+    transform:translateY(-5px);
+    border-color:#3a3200;
+}
+
+.icon{
+    width:45px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#1a1807;
+    color:#f5c400;
+    border-radius:10px;
+    font-size:20px;
+    margin-bottom:22px;
+}
+
+.benefit h3{
+    font-size:17px;
+    margin-bottom:10px;
+}
+
+.benefit p{
+    color:#858585;
+    font-size:13px;
+    line-height:1.7;
+}
+
+/* SERVICES */
+
+.services{
+    background:#070707;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    max-width:950px;
+}
+
+.service-card{
+    border:1px solid #242424;
+    background:linear-gradient(145deg,#111,#0b0b0b);
+    border-radius:18px;
+    padding:32px;
+    position:relative;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+    border-color:#665600;
+}
+
+.service-card.featured{
+    border-color:#f5c400;
+}
+
+.service-card.featured:before{
+    content:"MAIS PEDIDA";
+    position:absolute;
+    top:20px;
+    right:20px;
+    background:#f5c400;
+    color:#050505;
+    padding:7px 10px;
+    border-radius:5px;
+    font-size:9px;
+    font-weight:900;
+}
+
+.service-number{
+    color:#555;
+    font-size:12px;
+    font-weight:800;
+    margin-bottom:30px;
+}
+
+.service-card h3{
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.service-card p{
+    color:#888;
+    font-size:13px;
+    line-height:1.7;
+    min-height:44px;
+}
+
+.price{
+    margin:28px 0;
+    font-size:40px;
+    font-weight:900;
+    letter-spacing:-2px;
+}
+
+.price small{
+    font-size:13px;
+    color:#777;
+    font-weight:500;
+    letter-spacing:0;
+}
+
+.features{
+    list-style:none;
+    border-top:1px solid #222;
+    padding-top:20px;
+}
+
+.features li{
+    color:#bbb;
+    font-size:13px;
+    margin:12px 0;
+}
+
+.features li:before{
+    content:"✓";
+    color:#f5c400;
+    font-weight:900;
+    margin-right:9px;
+}
+
+/* HOME WASH */
+
+.home-wash{
+    background:#0b0b0b;
+}
+
+.home-box{
+    max-width:1100px;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+    align-items:center;
+}
+
+.home-text h2{
+    font-size:clamp(34px,5vw,58px);
+    line-height:1;
+    letter-spacing:-2px;
+    margin-bottom:22px;
+}
+
+.home-text h2 span{
+    color:#f5c400;
+}
+
+.home-text p{
+    color:#999;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.check-list{
+    list-style:none;
+}
+
+.check-list li{
+    margin:15px 0;
+    color:#ccc;
+    font-size:14px;
+}
+
+.check-list li span{
+    display:inline-flex;
+    width:24px;
+    height:24px;
+    align-items:center;
+    justify-content:center;
+    background:#1a1807;
+    color:#f5c400;
+    border-radius:50%;
+    margin-right:10px;
+}
+
+.home-card{
+    border-radius:20px;
+    padding:35px;
+    background:
+    linear-gradient(145deg,#171717,#0d0d0d);
+    border:1px solid #272727;
+}
+
+.home-card .big{
+    font-size:65px;
+    font-weight:900;
+    color:#f5c400;
+    letter-spacing:-4px;
+}
+
+.home-card h3{
+    font-size:23px;
+    margin-bottom:15px;
+}
+
+.home-card p{
+    color:#888;
+    font-size:13px;
+    line-height:1.7;
+}
+
+/* PROCESS */
+
+.process{
+    background:#070707;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.step{
+    padding:28px;
+    border-top:1px solid #292929;
+}
+
+.step-number{
+    color:#f5c400;
+    font-size:13px;
+    font-weight:900;
+    margin-bottom:45px;
+}
+
+.step h3{
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.step p{
+    color:#858585;
+    font-size:13px;
+    line-height:1.7;
+}
+
+/* FEEDBACK */
+
+.feedback{
+    background:#0b0b0b;
+}
+
+.feedback-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.feedback-card{
+    padding:30px;
+    background:#101010;
+    border:1px solid #1d1d1d;
+    border-radius:15px;
+}
+
+.stars{
+    color:#f5c400;
+    letter-spacing:3px;
+    margin-bottom:22px;
+}
+
+.feedback-card p{
+    color:#aaa;
+    line-height:1.8;
+    font-size:13px;
+    margin-bottom:25px;
+}
+
+.client{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.avatar{
+    width:40px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#f5c400;
+    color:#050505;
+    font-weight:900;
+}
+
+.client strong{
+    display:block;
+    font-size:13px;
+}
+
+.client span{
+    color:#666;
+    font-size:11px;
+}
+
+/* CTA */
+
+.cta{
+    padding:80px 7%;
+}
+
+.cta-box{
+    background:#f5c400;
+    color:#050505;
+    padding:65px;
+    border-radius:22px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.cta-box h2{
+    font-size:clamp(32px,5vw,58px);
+    line-height:.95;
+    letter-spacing:-3px;
+    max-width:650px;
+}
+
+.cta-box p{
+    margin-top:15px;
+    max-width:560px;
+    line-height:1.6;
+    font-size:14px;
+    opacity:.7;
+}
+
+.cta-button{
+    background:#050505;
+    color:#fff;
+    padding:17px 25px;
+    border-radius:9px;
+    font-weight:900;
+    white-space:nowrap;
+}
+
+/* AGENDAMENTO */
+
+.booking{
+    background:#0b0b0b;
+}
+
+.booking-container{
+    max-width:800px;
+}
+
+.form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.field.full{
+    grid-column:1/-1;
+}
+
+.field label{
+    font-size:11px;
+    color:#888;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.7px;
+}
+
+.field input,
+.field select,
+.field textarea{
+    width:100%;
+    background:#111;
+    border:1px solid #292929;
+    color:#fff;
+    padding:15px;
+    border-radius:8px;
+    outline:none;
+    transition:.3s;
+}
+
+.field textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+    border-color:#f5c400;
+}
+
+.form button{
+    grid-column:1/-1;
+    margin-top:10px;
+}
+
+/* FOOTER */
+
+footer{
+    padding:45px 7%;
+    border-top:1px solid #181818;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+footer p{
+    color:#555;
+    font-size:11px;
+}
+
+.footer-logo{
+    font-weight:900;
+}
+
+.footer-logo span{
+    color:#f5c400;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:57px;
+    height:57px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    z-index:2000;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.08);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    nav{
+        display:none;
+    }
+
+    .header-btn{
+        padding:9px 13px;
+        font-size:11px;
+    }
+
+    .benefit-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .home-box{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .feedback-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cta-box{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:40px 30px;
+    }
+}
+
+@media(max-width:650px){
+
+    section{
+        padding:75px 5%;
+    }
+
+    .hero{
+        padding:135px 5% 65px;
+    }
+
+    .hero h1{
+        letter-spacing:-3px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .hero-info{
+        gap:18px;
+    }
+
+    .benefit-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-card{
+        padding:25px;
+    }
+
+    .form{
+        grid-template-columns:1fr;
+    }
+
+    .field.full{
+        grid-column:auto;
+    }
+
+    .form button{
+        grid-column:auto;
+    }
+
+    .cta{
+        padding:60px 5%;
+    }
+
+    .cta-box h2{
+        letter-spacing:-2px;
+    }
+
+    footer{
+        padding:35px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <a href="#" class="logo">MK <span>AUTO PRIME</span></a>
+
+    <nav>
+        <a href="#servicos">Serviços</a>
+        <a href="#domicilio">A domicílio</a>
+        <a href="#feedback">Feedbacks</a>
+        <a href="#agendamento">Agendar</a>
+    </nav>
+
+    <a class="header-btn" href="#agendamento">
+        AGENDAR
+    </a>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="tag">
+            <i></i>
+            LAVAGEM AUTOMOTIVA A DOMICÍLIO
+        </div>
+
+        <h1>
+            Seu carro limpo.
+            <span>Sem sair de casa.</span>
+        </h1>
+
+        <p>
+            Você não precisa perder tempo levando o carro até um lava-jato.
+            A MK Auto Prime vai até você e deixa seu carro pronto para
+            o dia a dia, para aquele compromisso ou para aquela saída especial.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#agendamento" class="btn-primary">
+                AGENDAR MINHA LAVAGEM →
+            </a>
+
+            <a href="#servicos" class="btn-secondary">
+                VER SERVIÇOS
+            </a>
+
+        </div>
+
+        <div class="hero-info">
+
+            <div>
+                ⚡ <span><strong>Prático</strong><br>Agendamento rápido</span>
+            </div>
+
+            <div>
+                🏠 <span><strong>No seu endereço</strong><br>Lavagem a domicílio</span>
+            </div>
+
+            <div>
+                ⭐ <span><strong>Capricho</strong><br>Cuidado em cada detalhe</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BENEFÍCIOS -->
+
+<section class="benefits">
+
+    <div class="section-head">
+
+        <div class="eyebrow">Por que escolher a MK?</div>
+
+        <h2>
+            Você ganha tempo.
+            Seu carro ganha cuidado.
+        </h2>
+
+        <p>
+            A ideia é simples: você continua sua rotina enquanto a gente
+            cuida da limpeza do seu carro.
+        </p>
+
+    </div>
+
+    <div class="benefit-grid">
+
+        <div class="benefit">
+
+            <div class="icon">🏠</div>
+
+            <h3>Lavagem a domicílio</h3>
+
+            <p>
+                Você informa o endereço e nós vamos até você.
+                Mais comodidade para sua rotina.
+            </p>
+
+        </div>
+
+        <div class="benefit">
+
+            <div class="icon">⏱</div>
+
+            <h3>Economize seu tempo</h3>
+
+            <p>
+                Não precisa dirigir até um lava-jato,
+                esperar atendimento e depois voltar para buscar.
+            </p>
+
+        </div>
+
+        <div class="benefit">
+
+            <div class="icon">✨</div>
+
+            <h3>Seu carro renovado</h3>
+
+            <p>
+                Uma limpeza bem feita muda completamente
+                a aparência e a sensação dentro do veículo.
+            </p>
+
+        </div>
+
+        <div class="benefit">
+
+            <div class="icon">📲</div>
+
+            <h3>Agendamento fácil</h3>
+
+            <p>
+                Escolha o serviço, dia, horário e endereço.
+                O pedido vai direto para nosso WhatsApp.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVIÇOS -->
+
+<section class="services" id="servicos">
+
+    <div class="section-head">
+
+        <div class="eyebrow">Serviços</div>
+
+        <h2>
+            Escolha a lavagem
+            que seu carro precisa.
+        </h2>
+
+        <p>
+            Serviços objetivos, preços acessíveis e atendimento
+            pensado para facilitar sua vida.
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+        <div class="service-card">
+
+            <div class="service-number">01 / LAVAGEM</div>
+
+            <h3>Lavagem Simples</h3>
+
+            <p>
+                Ideal para manter o carro limpo no dia a dia.
+            </p>
+
+            <div class="price">
+                R$ 40 <small>/ carro pequeno</small>
+            </div>
+
+            <ul class="features">
+                <li>Lavagem externa</li>
+                <li>Limpeza dos tapetes</li>
+                <li>Pretinho nos pneus</li>
+                <li>Acabamento externo</li>
+            </ul>
+
+        </div>
+
+
+        <div class="service-card featured">
+
+            <div class="service-number">02 / COMPLETA</div>
+
+            <h3>Lavagem Completa</h3>
+
+            <p>
+                Para quem quer sair com o carro realmente renovado.
+            </p>
+
+            <div class="price">
+                R$ 55 <small>/ carro pequeno</small>
+            </div>
+
+            <ul class="features">
+                <li>Lavagem externa</li>
+                <li>Limpeza interna</li>
+                <li>Limpeza dos tapetes</li>
+                <li>Pretinho nos pneus</li>
+                <li>Acabamento completo</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DOMICÍLIO -->
+
+<section class="home-wash" id="domicilio">
+
+    <div class="home-box">
+
+        <div class="home-text">
+
+            <div class="eyebrow">
+                Pensado para sua rotina
+            </div>
+
+            <h2>
+                Não tem tempo?
+                <span>A gente vai até você.</span>
+            </h2>
+
+            <p>
+                Sabe aquele dia corrido? Você precisa sair, trabalhar,
+                levar alguém em algum lugar ou simplesmente não quer
+                ficar esperando em um lava-jato?
+            </p>
+
+            <p>
+                É justamente aí que entra a MK Auto Prime.
+                Você agenda, passa o endereço e deixa o resto com a gente.
+            </p>
+
+            <ul class="check-list">
+
+                <li>
+                    <span>✓</span>
+                    Você não precisa sair de casa
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    Escolha o melhor horário para você
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    Atendimento no endereço informado
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    Ideal para quem tem rotina corrida
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="home-card">
+
+            <div class="big">01</div>
+
+            <h3>
+                Você agenda.
+            </h3>
+
+            <p>
+                Escolha o serviço, dia, horário e informe onde
+                o carro estará. A solicitação chega diretamente
+                no nosso WhatsApp.
+            </p>
+
+            <br>
+
+            <div class="big">02</div>
+
+            <h3>
+                A gente cuida do resto.
+            </h3>
+
+            <p>
+                Você continua sua rotina enquanto seu carro
+                recebe o cuidado que merece.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROCESSO -->
+
+<section class="process">
+
+    <div class="section-head">
+
+        <div class="eyebrow">Como funciona</div>
+
+        <h2>
+            Simples do começo ao fim.
+        </h2>
+
+    </div>
+
+    <div class="process-grid">
+
+        <div class="step">
+
+            <div class="step-number">01 — AGENDAMENTO</div>
+
+            <h3>Escolha o serviço</h3>
+
+            <p>
+                Selecione a lavagem que deseja e informe
+                seus dados no formulário.
+            </p>
+
+        </div>
+
+        <div class="step">
+
+            <div class="step-number">02 — CONFIRMAÇÃO</div>
+
+            <h3>Falamos pelo WhatsApp</h3>
+
+            <p>
+                Recebemos seu pedido e confirmamos
+                os detalhes do atendimento.
+            </p>
+
+        </div>
+
+        <div class="step">
+
+            <div class="step-number">03 — ATENDIMENTO</div>
+
+            <h3>Seu carro recebe o cuidado</h3>
+
+            <p>
+                Vamos até o endereço combinado e realizamos
+                o serviço escolhido.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEEDBACKS -->
+
+<section class="feedback" id="feedback">
+
+    <div class="section-head">
+
+        <div class="eyebrow">Quem já conhece</div>
+
+        <h2>
+            O que nossos clientes dizem.
+        </h2>
+
+        <p>
+            Alguns exemplos de feedbacks para apresentar
+            a experiência de quem utiliza o serviço.
+        </p>
+
+    </div>
+
+    <div class="feedback-grid">
+
+        <div class="feedback-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "Muito mais prático do que levar o carro no lava-jato.
+                Marquei o horário e fizeram tudo aqui em casa."
+            </p>
+
+            <div class="client">
+
+                <div class="avatar">R</div>
+
+                <div>
+                    <strong>Rafael</strong>
+                    <span>Cliente MK Auto Prime</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="feedback-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "Gostei muito do resultado. O carro ficou bem limpo
+                por dentro e por fora. Atendimento muito bom."
+            </p>
+
+            <div class="client">
+
+                <div class="avatar">J</div>
+
+                <div>
+                    <strong>João</strong>
+                    <span>Cliente MK Auto Prime</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="feedback-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "O que mais gostei foi não precisar sair de casa.
+                Agendei e ficou tudo certinho."
+            </p>
+
+            <div class="client">
+
+                <div class="avatar">M</div>
+
+                <div>
+                    <strong>Marcos</strong>
+                    <span>Cliente MK Auto Prime</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="cta-box">
+
+        <div>
+
+            <h2>
+                Seu carro está precisando de uma lavagem?
+            </h2>
+
+            <p>
+                Escolha o melhor horário e deixe a MK Auto Prime
+                cuidar do resto.
+            </p>
+
+        </div>
+
+        <a href="#agendamento" class="cta-button">
+            AGENDAR AGORA →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- AGENDAMENTO -->
+
+<section class="booking" id="agendamento">
+
+    <div class="section-head">
+
+        <div class="eyebrow">Agendamento</div>
+
+        <h2>
+            Vamos marcar sua lavagem?
+        </h2>
+
+        <p>
+            Preencha os dados abaixo. Ao clicar em agendar,
+            o WhatsApp será aberto com todas as informações prontas.
+        </p>
+
+    </div>
+
+
+    <div class="booking-container">
+
+        <form class="form" id="bookingForm">
+
+            <div class="field">
+
+                <label>Seu nome</label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Telefone</label>
+
+                <input
+                    type="tel"
+                    id="telefone"
+                    placeholder="(61) 99999-9999"
+                    required
+                >
+
+            </div>
+
+
+            <div class="field full">
+
+                <label>Escolha o serviço</label>
+
+                <select id="servico" required>
+
+                    <option value="">
+                        Selecione uma opção
+                    </option>
+
+                    <option value="Lavagem Simples — R$ 40">
+                        Lavagem Simples — R$ 40
+                    </option>
+
+                    <option value="Lavagem Completa — R$ 55">
+                        Lavagem Completa — R$ 55
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Dia</label>
+
+                <input
+                    type="date"
+                    id="data"
+                    required
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Horário</label>
+
+                <input
+                    type="time"
+                    id="horario"
+                    required
+                >
+
+            </div>
+
+
+            <div class="field full">
+
+                <label>Endereço do atendimento</label>
+
+                <input
+                    type="text"
+                    id="endereco"
+                    placeholder="Rua, número, bairro..."
+                    required
+                >
+
+            </div>
+
+
+            <div class="field full">
+
+                <label>Observação</label>
+
+                <textarea
+                    id="observacao"
+                    placeholder="Alguma informação sobre o carro ou o local?"
+                ></textarea>
+
+            </div>
+
+
+            <button type="submit" class="btn-primary">
+                CONFIRMAR AGENDAMENTO PELO WHATSAPP →
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-logo">
+        MK <span>AUTO PRIME</span>
+    </div>
+
+    <p>
+        © 2026 MK Auto Prime — Lavagem automotiva a domicílio.
+    </p>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+    href="https://wa.me/5561995840815"
+    class="whatsapp"
+    target="_blank"
+    aria-label="WhatsApp"
+>
+    ☎
+</a>
+
+
+<script>
+
+const form = document.getElementById("bookingForm");
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const nome =
+        document.getElementById("nome").value.trim();
+
+    const telefone =
+        document.getElementById("telefone").value.trim();
+
+    const servico =
+        document.getElementById("servico").value;
+
+    const data =
+        document.getElementById("data").value;
+
+    const horario =
+        document.getElementById("horario").value;
+
+    const endereco =
+        document.getElementById("endereco").value.trim();
+
+    const observacao =
+        document.getElementById("observacao").value.trim();
+
+
+    if(!nome || !telefone || !servico || !data || !horario || !endereco){
+
+        alert("Preencha todos os campos obrigatórios.");
+
+        return;
+
+    }
+
+
+    const dataFormatada =
+        data.split("-").reverse().join("/");
+
+
+    let mensagem =
+`🚗 *NOVO AGENDAMENTO — MK AUTO PRIME*
+
+👤 *Nome:* ${nome}
+
+📱 *Telefone:* ${telefone}
+
+🧽 *Serviço:* ${servico}
+
+📅 *Data:* ${dataFormatada}
+
+⏰ *Horário:* ${horario}
+
+📍 *Endereço:* ${endereco}`;
+
+
+    if(observacao){
+
+        mensagem += `
+
+📝 *Observação:*
+${observacao}`;
+
+    }
+
+
+    mensagem += `
+
+Olá! Gostaria de confirmar esse agendamento.`;
+
+
+
+    const numero =
+        "5561995840815";
+
+
+    const url =
+        "https://wa.me/" +
+        numero +
+        "?text=" +
+        encodeURIComponent(mensagem);
+
+
+    window.open(url, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>
